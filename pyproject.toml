@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "datia-synth"
+version = "1.0.0"
+description = "Librería open source de generación y validación de datos sintéticos para movilidad, salud y acción social (Proyecto DatIA)"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "INFORTIC / CEU-UCH", email = "info@infortic.es" }
+]
+keywords = ["synthetic data", "mobility", "health", "post-quantum", "GDPR", "privacy"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "scipy>=1.11",
+    "scikit-learn>=1.4",
+    "sdv>=1.9",
+    "umap-learn>=0.5.6",
+    "ripser>=0.6.8",
+    "persim>=0.3.7",
+]
+
+[project.optional-dependencies]
+api = [
+    "fastapi>=0.109",
+    "uvicorn[standard]>=0.27",
+    "pydantic>=2.6",
+    "python-multipart>=0.0.6",
+]
+crypto = [
+    "liboqs-python>=0.10.0",
+]
+all = [
+    "datia-synth[api,crypto]",
+]
+
+[project.urls]
+Homepage = "https://github.com/iantum-dev/datia-synth"
+Documentation = "https://github.com/iantum-dev/datia-synth#readme"
+"Bug Tracker" = "https://github.com/iantum-dev/datia-synth/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["datia_synth*"]

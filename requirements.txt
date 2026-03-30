@@ -1,0 +1,13 @@
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.6.1
+numpy==1.26.3
+pandas==2.1.4
+scipy==1.11.4
+scikit-learn==1.4.0
+sdv==1.9.0
+python-multipart==0.0.6
+liboqs-python>=0.10.0
+umap-learn>=0.5.6
+ripser>=0.6.8
+persim>=0.3.7
