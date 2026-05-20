@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
 
 # 2. COMPILACIÓN DE LIBOQS (Rama main para tener los símbolos más recientes)
 WORKDIR /liboqs_build
-RUN git clone --depth 1 --branch main https://github.com/open-quantum-safe/liboqs.git .
+RUN git clone --depth 1 --branch 0.14.0 https://github.com/open-quantum-safe/liboqs.git .
 RUN mkdir build && cd build && \
     cmake -GNinja -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=/usr/local .. && \
     ninja install
