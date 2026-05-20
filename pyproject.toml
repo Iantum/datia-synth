@@ -45,9 +45,9 @@ all = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/iantum-dev/datia-synth"
-Documentation = "https://github.com/iantum-dev/datia-synth#readme"
-"Bug Tracker" = "https://github.com/iantum-dev/datia-synth/issues"
+Homepage = "https://github.com/iantum/datia-synth"
+Documentation = "https://github.com/iantum/datia-synth#readme"
+"Bug Tracker" = "https://github.com/iantum/datia-synth/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]

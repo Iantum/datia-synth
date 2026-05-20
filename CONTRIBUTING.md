@@ -6,7 +6,7 @@ Thank you for your interest in contributing to datia-synth!
 
 ### Reporting bugs
 
-Open an issue at https://github.com/iantum-dev/datia-synth/issues with:
+Open an issue at https://github.com/iantum/datia-synth/issues with:
 - A clear description of the bug
 - Steps to reproduce
 - Expected vs actual behaviour
@@ -30,7 +30,7 @@ Open an issue with the `enhancement` label describing:
 ## Development setup
 
 ```bash
-git clone https://github.com/iantum-dev/datia-synth.git
+git clone https://github.com/iantum/datia-synth.git
 cd datia-synth
 pip install -e ".[all]"
 ```

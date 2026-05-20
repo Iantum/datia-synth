@@ -32,7 +32,7 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            ghcr.io/iantum-dev/datia-synth:latest
-            ghcr.io/iantum-dev/datia-synth:1.0.0
+            ghcr.io/iantum/datia-synth:latest
+            ghcr.io/iantum/datia-synth:1.0.0
           cache-from: type=gha
           cache-to: type=gha,mode=max

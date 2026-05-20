@@ -6,7 +6,7 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![FIPS 204](https://img.shields.io/badge/Post--Quantum-ML--DSA--44%20FIPS%20204-green.svg)](https://csrc.nist.gov/pubs/fips/204/final)
 
-Developed by **INFORTIC** and **CEU-UCH** as part of [Proyecto DatIA](https://github.com/iantum-dev/datia-synth), funded by IVACE+i (Generalitat Valenciana) under the sectoral data spaces programme.
+Developed by **INFORTIC** and **CEU-UCH** as part of [Proyecto DatIA](https://github.com/iantum/datia-synth), funded by IVACE+i (Generalitat Valenciana) under the sectoral data spaces programme.
 
 ---
 
@@ -38,7 +38,7 @@ pip install "datia-synth[crypto]"
 pip install "datia-synth[all]"
 
 # From source
-git clone https://github.com/iantum-dev/datia-synth.git
+git clone https://github.com/iantum/datia-synth.git
 cd datia-synth
 pip install -e ".[all]"
 ```
@@ -232,7 +232,7 @@ If you use datia-synth in your research, please cite:
   author    = {INFORTIC and CEU-UCH},
   title     = {datia-synth: Open-source synthetic data generation for mobility and health},
   year      = {2026},
-  url       = {https://github.com/iantum-dev/datia-synth},
+  url       = {https://github.com/iantum/datia-synth},
   license   = {Apache-2.0}
 }
 ```
