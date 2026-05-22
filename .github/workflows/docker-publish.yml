@@ -30,7 +30,7 @@ jobs:
         with:
           context: .
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           tags: |
             ghcr.io/iantum/datia-synth:latest
             ghcr.io/iantum/datia-synth:1.0.0
