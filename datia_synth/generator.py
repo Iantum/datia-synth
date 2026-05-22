@@ -89,8 +89,21 @@ class DatiaSynthesizer:
             or (df_real[c].dtype == object and df_real[c].nunique() == len(df_real))
         ]
         df_synth_input = df_real.drop(columns=cols_to_drop, errors="ignore")
-        # Eliminar filas con NaN en columnas numéricas (edad=NULL, etc.)
-        # SDV no maneja NaN y destroza wasserstein/PCA/correlación
+        # Columnas numéricas completamente vacías (campo opcional no presente en el formulario,
+        # p.ej. 'year' cuando el formulario no recoge fecha de nacimiento):
+        # se eliminan del entrenamiento en lugar de vaciar el dataset entero.
+        numeric_cols_all = df_synth_input.select_dtypes(include="number").columns.tolist()
+        all_null_numeric = [c for c in numeric_cols_all if df_synth_input[c].isna().all()]
+        if all_null_numeric:
+            import warnings
+            warnings.warn(
+                f"Columnas numéricas completamente vacías eliminadas del entrenamiento "
+                f"(campo opcional ausente en el formulario): {all_null_numeric}",
+                UserWarning, stacklevel=2,
+            )
+            df_synth_input = df_synth_input.drop(columns=all_null_numeric)
+
+        # Eliminar filas con NaN en columnas numéricas restantes (SDV no maneja NaN)
         numeric_cols = df_synth_input.select_dtypes(include="number").columns.tolist()
         if numeric_cols:
             df_synth_input = df_synth_input.dropna(subset=numeric_cols).reset_index(drop=True)
